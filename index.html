@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secure Online E-Voting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🗳️ Secure Online E-Voting System</h1>
+
+    <!-- Login -->
+    <div id="loginBox">
+        <h2>Voter Login</h2>
+        <input type="text" id="voterId" placeholder="Enter Voter ID">
+        <button onclick="login()">Login</button>
+        <p id="loginMsg"></p>
+    </div>
+
+    <!-- Voting -->
+    <div id="voteBox" class="hidden">
+        <h2>Cast Your Vote</h2>
+
+        <label>
+            <input type="radio" name="candidate" value="Candidate A">
+            Candidate A
+        </label>
+
+        <label>
+            <input type="radio" name="candidate" value="Candidate B">
+            Candidate B
+        </label>
+
+        <label>
+            <input type="radio" name="candidate" value="Candidate C">
+            Candidate C
+        </label>
+
+        <button onclick="submitVote()">Submit Vote</button>
+        <p id="voteMsg"></p>
+    </div>
+
+    <!-- Results -->
+    <div id="resultBox">
+        <h2>Live Results</h2>
+        <p>Candidate A: <span id="aVotes">0</span></p>
+        <p>Candidate B: <span id="bVotes">0</span></p>
+        <p>Candidate C: <span id="cVotes">0</span></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
